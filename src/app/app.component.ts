@@ -1,4 +1,3 @@
-import { RecordsService } from './records.service';
 import { HelloComponent } from './hello/hello.component';
 import { Component } from '@angular/core';
 
@@ -15,14 +14,12 @@ interface myData  {
 export class AppComponent {
   records = {};
 
-   constructor(private myFirstService : RecordsService) {
+   constructor() {
     
    }
 
   ngOnInit() {
-   this.records = this.myFirstService.getData().subscribe(data=>  {
-    this.records  =  data.obj
-  })
+   
   }
 
 }
